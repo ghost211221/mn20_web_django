@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Программа управления микросхемой 1367МН015</title>
+    <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:100,300,400,700" rel="stylesheet">
+    <link rel="stylesheet" href="../css/mn20style.css"> 
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="logopan">
+                <img class="logo" src="../img/progress-logo.png" alt="Логотип">
+            </div>
+            <div class="devpan">
+                <select name="" id="" class="Combo"></select>
+                <button class="connectBtn">Подключиться</button>
+                <button class="scanBtn">Поиск устройств</button>
+                <a href="" class="lamp disabled"></a>
+            </div>
+        </div>
+        <div class="content">
+            <div><img class="schema" src="../img/schema_temp.png" alt="Схема"></div>
+            <div class="controlPan">
+                <div class="commonPars">
+                    <h3 class="commonParsHeader">Общие настройки</h3>
+                    <div class="tableContainer">
+                        <table class="charsList">
+                            <tr> 
+                                <td><input type="checkbox" checked>Дизеринг<Br></td> 
+                            </tr>
+                            <tr> 
+                                <td><p class="parLab">Источник смещения ЦАП</p></td>
+                                <td><select name="" id="iref" class="forms Combo"></select></td>
+                            </tr>
+                            <tr> 
+                                <td><p class="parLab">Выходной ток ЦАП</p></td>
+                                <td><select name="" id="idac" class="forms Combo"></select></td>
+                                <td><p class="mesLab">мА</p></td>
+                            </tr>
+                            <tr> 
+                                <td><p class="parLab">Входная частота</p></td>
+                                <td><input type="number" min="0" max="1200" step="1" value="100" class="forms spinbox"></td>
+                                <td><p class="mesLab">МГц</p></td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <div class="commonPars">
+                    <h3 class="commonParsHeader">Настройки выходного сигнала</h3>
+                    <div class="tabbedPars">
+                        <!-- Tab links -->
+                        <div class="tabButtons">
+                            <button class="tablinks" onclick="" id="pack0">Набор 0</button>
+                            <button class="tablinks" onclick="" id="pack1">Набор 1</button>
+                            <button class="tablinks" onclick="" id="pack2">Набор 2</button>
+                            <button class="tablinks" onclick="" id="pack3">Набор 3</button>
+                        </div>
+                        <!-- Tab content -->
+                        <div class="tableContainer">
+                            <table class="regsList">
+                                <tr>
+                                    <td><p class="parLab">Инкремент аккумулятора</p></td>
+                                    <td><input type="number" min="0" max="" step="1" value="0"class="forms spinbox"></td>
+                                </tr>
+                                <tr>
+                                    <td><p class="parLab">Смещение частоты</p></td>
+                                    <td><input type="number" min="0" max="" step="1" value="0"class="forms spinbox"></td>
+                                    <td><p class="mesLab">МГц</p></td>
+                                </tr>
+                                <tr>
+                                    <td><p class="parLab">Смещение фазы</p></td>
+                                    <td><input type="number" min="0" max="" step="1" value="0"class="forms spinbox"></td>
+                                    <td><p class="mesLab">°</p></td>
+                                </tr>
+                                <tr> 
+                                    <td><input type="checkbox" class="forms checkbox" checked>Режим ЛЧМ</td> 
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr> 
+                                    <td><input type="checkbox" class="forms checkbox" checked>Режим "direct"</td> 
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <!-- reg sel panel -->
+                <div class="regSelPan">
+                    <h3 class="commonParsHeader">Выбор активного набора регистров</h3>
+                    <div class="tableContainer">
+                        <table class="regsList regSel">
+                            <tr>
+                                <td><input type="checkbox" checked>SE<Br></td>
+                            </tr>
+                            <tr>
+                                <td><p class="parLab">Набор регистров</p></td>
+                                <td><input type="number" min="0" max="3" step="1" value="0" class="forms spinbox"></td>
+                            </tr>
+                        </table>
+                    </div>
+                    
+                    <!-- <div class="selPan">
+                        
+                        
+                    </div> -->
+                </div>
+                
+            </div>
+            <div>
+                <h3 class="commonParsHeader">Регистры</h3>
+                <div class="regContainer">
+                    <table class="regList">
+                        <tr>
+                            <td><input class="regLine" type="text" cols="10" id="reg0x00" value="0x00000000" readonly=""></td>
+                            <td><input class="regLine" type="text" cols="10" id="reg0x18" value="0x00000000" readonly></td> 
+                        </tr>
+                        <tr>
+                            <td><button class="regBtn" onclick="" id="reg0x00">Отправить 0x00</button></td>
+                            <td><button class="regBtn" onclick="" id="reg0x18">Отправить 0x18</button></td>
+                        </tr>
+                        <tr>
+                            <td><input class="regLine" type="text" cols="10" id="reg0x10" value="0x00000000" readonly></td>
+                            <td><input class="regLine" type="text" cols="10" id="reg0x19" value="0x00000000" readonly></td>                            
+                        </tr>
+                        <tr>
+                            <td><button class="regBtn" onclick="" id="reg0x10">Отправить 0x10</button></td>
+                            <td><button class="regBtn" onclick="" id="reg0x19">Отправить 0x19</button></td>
+                        </tr>
+                        <tr>
+                            <td><input class="regLine" type="text" cols="10" id="reg0x11" value="0x00000000" readonly></td>
+                            <td><input class="regLine" type="text" cols="10" id="reg0x1A" value="0x00000000" readonly></td>
+                        </tr>
+                        <tr>
+                            <td><button class="regBtn" onclick="" id="reg0x11">Отправить 0x11</button></td>
+                            <td><button class="regBtn" onclick="" id="reg0x1A">Отправить 0x1A</button></td>
+                        </tr>
+                        <tr>
+                            <td><input class="regLine" type="text" cols="10" id="reg0x12" value="0x00000000" readonly></td>
+                            <td><input class="regLine" type="text" cols="10" id="reg0x1C" value="0x00000000" readonly></td>                           
+                        </tr>
+                        <tr>
+                            <td><button class="regBtn" onclick="" id="reg0x12">Отправить 0x12</button></td>
+                            <td><button class="regBtn" onclick="" id="reg0x1C">Отправить 0x1C</button></td>
+                        </tr>
+                        <tr>
+                            <td><input class="regLine" type="text" cols="10" id="reg0x14" value="0x00000000" readonly></td>
+                            <td><input class="regLine" type="text" cols="10" id="reg0x1D" value="0x00000000" readonly></td>
+                        </tr>
+                        <tr>
+                            <td><button class="regBtn" onclick="" id="reg0x14">Отправить 0x14</button></td>
+                            <td><button class="regBtn" onclick="" id="reg0x1D">Отправить 0x1D</button></td>
+                        </tr>
+                        <tr>
+                            <td><input class="regLine" type="text" cols="10" id="reg0x15" value="0x00000000" readonly></td>
+                            <td><input class="regLine" type="text" cols="10" id="reg0x1E" value="0x00000000" readonly></td>                            
+                        </tr>
+                        <tr>
+                            <td><button class="regBtn" onclick="" id="reg0x15">Отправить 0x15</button></td>
+                            <td><button class="regBtn" onclick="" id="reg0x1E">Отправить 0x1E</button></td>
+                        </tr>
+                        <tr>
+                            <td><input class="regLine" type="text" cols="10" id="reg0x16" value="0x00000000" readonly></td>
+                            <td><button class="regBtn" onclick="" id="regClr">Сброс данных</button></td>
+                        </tr>
+                        <tr>
+                            <td><button class="regBtn" onclick="" id="reg0x16">Отправить 0x16</button></td>
+                            <td><button class="regBtn" onclick="" id="regAll">Отправка регистров</button></td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="logPan">
+                    <p><textarea class="logArea" readonly></textarea></p>
+                </div>
+            </div>
+            
+        </div> 
+        <div class="footer">
+            © Все права защищены
+        </div>
+    </div>
+</body>
+</html>

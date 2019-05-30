@@ -1,0 +1,126 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+html,
+body {
+  height: 100%;
+}
+body {
+       background: #E1E0E1;
+}
+
+.header {
+    display: flex;
+    background-color: #DDBE5C;
+    height:           150px;
+    font-size:        16px;
+    justify-content:  space-between;
+}
+.logo {
+    height: 130px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.devpan {
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-end;
+}
+.Combo {
+    width: 150px;
+    margin-right: 5px;
+}
+.connectBtn {
+    width: 150px;
+    margin-right: 5px;
+}
+.scanBtn {
+    width: 150px;
+    margin-right: 5px;
+}
+
+.container {
+    
+}
+.content{
+    /*min-height: calc(100vh - 80px - 150px - 20px);*/
+    padding: 10px;
+    display: flex;
+    background-color: #EEEEAC;
+}
+.schema {
+    /*height: calc(100vh - 80px - 150px - 20px - 10px);*/
+    border:    1px solid #BBAE77;
+}
+.schema:hover {
+    border:    1px solid black;
+}
+.controlPan{
+    padding: 10px;
+}
+.commonPars{
+
+}
+.commonParsHeader{
+    font-size:      30px;
+    border-spacing: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.commonParsPan{
+    display: flex;
+}
+
+.forms {
+    display: flex;
+    flex-flow: column;
+}
+
+.tabButtons {
+  overflow:         hidden;
+  border:           1px solid #ccc;
+  background-color: #CCAD4B;
+  width:            335px;
+}
+
+/* Style the buttons that are used to open the tab content */
+.tabButtons button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+}
+
+/* Change background color of buttons on hover */
+.tabButtons button:hover {
+  background-color: #999958;
+}
+
+/* Create an active/current tablink class */
+.tabButtons button.active {
+  background-color: #999958;
+}
+
+/* Style the tab content */
+.tabcontent {
+  display: block;
+  padding: 6px 12px;
+  border: 1px solid #ccc;
+  border-top: none;
+}
+.chkBox {
+    display: flex;
+}
+.footer {
+
+    display: flex;
+    background-color: #DDBE5C;
+    height: 40px;
+    justify-content:  flex-end;
+    padding: 20px;
+}

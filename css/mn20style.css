@@ -1,0 +1,182 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+html,
+body {
+  height: 100%;
+}
+body {
+       background: #E1E0E1;
+}
+
+.header {
+    display: flex;
+    background-color: #DDBE5C;
+    height:           150px;
+    font-size:        16px;
+    justify-content:  space-between;
+}
+
+.logo {
+    height: 130px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.devpan {
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-end;
+}
+.forms {
+  width: 150px;
+}
+.Combo {
+  width: 150px;
+}
+.spinbox {
+  width: 146px;
+}
+.parLab {
+  width: 200px;
+}
+.mesLab {
+  width: 20px;
+}
+.checkbox {
+  width: 15px;
+}
+.connectBtn {
+    width: 150px;
+    margin-right: 5px;
+}
+.scanBtn {
+    width: 150px;
+    margin-right: 5px;
+}
+
+.container {
+    
+}
+
+.content{
+    min-height: calc(100vh - 80px - 150px - 20px);
+    padding: 10px;
+    display: flex;
+    background-color: #EEEEAC;
+    justify-content: space-around;
+}
+.schema {
+    height: calc(100vh - 80px - 150px - 20px - 10px);
+    border:    1px solid #BBAE77;
+}
+.schema:hover {
+    border:    1px solid #333355; 
+}
+
+.controlPan {
+    padding: 10px;
+}
+
+.charsList {
+    border-spacing: 5px 5px;
+    width: 400px;
+}
+.regsList {
+    border-spacing: 5px 5px;
+    width: 286px;
+}
+
+.commonParsHeader{
+    font-size: 
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+.tableContainer {
+    border: 1px solid #BBAE77;
+    width: 420px;
+}
+.regContainer {
+    border: 1px solid #BBAE77;
+    width: 286px;
+}
+
+.tabButtons {
+  overflow:         hidden;
+  border:           1px solid #ccc;
+  background-color: #CCAD4B;
+  width:            335px;
+}
+
+/* Style the buttons that are used to open the tab content */
+.tabButtons button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+}
+
+/* Change background color of buttons on hover */
+.tabButtons button:hover {
+  background-color: #999958;
+}
+
+/* Create an active/current tablink class */
+.tabButtons button.active {
+  background-color: #999958;
+}
+
+.footer {
+    display: flex;
+    background-color: #DDBE5C;
+    height: 40px;
+    justify-content:  flex-end;
+    padding: 20px;
+}
+.logPan {
+}
+.logArea {
+    width:      288px;
+    margin-top: 30px;
+    height:     356px;
+    border:     1px solid #BBAE55;
+}
+.logArea:hover {
+    border:     1px solid #333355;    
+}
+.regLine {
+  width: 136px;
+}
+.regBtn {
+  width: 140px;
+}
+
+.selPan {
+    display: flex;
+}
+
+.lamp {
+    width: 25px;
+    height: 25px;    
+    opacity: 0.9;
+    border-radius: 50%;
+    display: block;
+    margin-left: 5px;
+    margin-right: 5px;
+    border: 2px solid black;
+}
+.disabled {
+    background-color: #404040;
+}
+.success {
+    background-color: #208020;
+}
+.failed {
+    background-color: #C01010;
+}
